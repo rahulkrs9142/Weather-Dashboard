@@ -2,10 +2,6 @@
 
 A responsive weather dashboard that displays real-time weather data and location-based conditions using the WeatherAPI.
 
-## 🌐 Live Demo
-
-[🔗 View Live](https://rahulkrs9142.github.io/Weather-Dashboard/)
-
 ## ✨ Features
 
 - 🔍 Search weather by city name
