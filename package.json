@@ -1,0 +1,14 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SkyPulse - Modern Real-Time Weather Dashboard",
+  "scripts": {
+    "dev": "vite --port 3030 --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}
