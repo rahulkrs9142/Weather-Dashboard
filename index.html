@@ -3,30 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css"/>
+    <meta name="description" content="SkyPulse - A modern, real-time interactive weather dashboard featuring 3-day forecast, hourly timeline, AQI, and atmospheric conditions.">
+    <meta name="theme-color" content="#0f172a">
+    <title>SkyPulse | Real-Time Weather Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="weather_container">
-            <h1 class="temp">20°C</h1>
+<body class="theme-default">
+    <!-- Atmospheric Ambient Glows -->
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
 
-            <div class="time_location">
-                <p>Delhi</p>
-                <span>12:54 - Monday 2026-05-12</span>
+    <div class="app-layout">
+        <!-- Top Navigation Bar -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="ph ph-cloud-sun"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">SkyPulse</span>
+                    <span class="brand-subtitle">Live Atmosphere</span>
+                </div>
             </div>
+        </header>
 
-            <div class="condition">
-                <p>Mist</p>
+        <!-- Weather Container Placeholder -->
+        <div class="container">
+            <div class="weather_container">
+                <h1 class="temp">20°C</h1>
+                <div class="time_location">
+                    <p>Delhi</p>
+                    <span>12:54 - Monday 2026-05-12</span>
+                </div>
+                <div class="condition">
+                    <p>Mist</p>
+                </div>
             </div>
         </div>
-        <nav>
-        <form>
-            <input type="text" placeholder="Enter city name" class="search_area">
-            <button type="submit">Search</button>
-        </form>
-    </nav>
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
