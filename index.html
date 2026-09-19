@@ -35,21 +35,73 @@
                     <span class="brand-subtitle">Live Atmosphere</span>
                 </div>
             </div>
-        </header>
 
-        <!-- Weather Container Placeholder -->
-        <div class="container">
-            <div class="weather_container">
-                <h1 class="temp">20°C</h1>
-                <div class="time_location">
-                    <p>Delhi</p>
-                    <span>12:54 - Monday 2026-05-12</span>
+            <!-- Search Area -->
+            <form id="search-form" class="search-form" role="search">
+                <div class="search-wrapper">
+                    <i class="ph ph-magnifying-glass search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Search city (e.g. Delhi, London, Tokyo)..." 
+                        autocomplete="off"
+                        spellcheck="false"
+                        required
+                    />
+                    <button type="button" id="clear-search-btn" class="clear-btn" aria-label="Clear search">
+                        <i class="ph ph-x"></i>
+                    </button>
                 </div>
-                <div class="condition">
-                    <p>Mist</p>
+                <button type="submit" class="search-btn" id="search-btn" aria-label="Search">
+                    <span>Search</span>
+                    <i class="ph ph-arrow-right"></i>
+                </button>
+            </form>
+
+            <!-- Actions: Location & Unit Switcher -->
+            <div class="header-actions">
+                <button type="button" id="geo-btn" class="action-btn geo-btn" title="Use My Current Location">
+                    <i class="ph ph-navigation-arrow"></i>
+                    <span class="btn-label">My Location</span>
+                </button>
+
+                <div class="unit-toggle" id="unit-toggle" role="group" aria-label="Temperature Unit">
+                    <button type="button" class="unit-btn active" data-unit="c">°C</button>
+                    <button type="button" class="unit-btn" data-unit="f">°F</button>
                 </div>
             </div>
+        </header>
+
+        <!-- Quick Select City Chips -->
+        <nav class="quick-cities" aria-label="Popular Cities">
+            <span class="quick-cities-label"><i class="ph ph-trend-up"></i> Popular:</span>
+            <div class="chips-scroll">
+                <button type="button" class="city-chip" data-city="New Delhi">New Delhi</button>
+                <button type="button" class="city-chip" data-city="Mumbai">Mumbai</button>
+                <button type="button" class="city-chip" data-city="Bengaluru">Bengaluru</button>
+                <button type="button" class="city-chip" data-city="London">London</button>
+                <button type="button" class="city-chip" data-city="New York">New York</button>
+                <button type="button" class="city-chip" data-city="Tokyo">Tokyo</button>
+                <button type="button" class="city-chip" data-city="Dubai">Dubai</button>
+                <button type="button" class="city-chip" data-city="Paris">Paris</button>
+            </div>
+        </nav>
+
+        <!-- Toast / Notification Alert -->
+        <div id="toast" class="toast" role="alert" aria-live="polite">
+            <i class="ph ph-warning-circle toast-icon"></i>
+            <span class="toast-message" id="toast-message">City not found. Please check the spelling.</span>
         </div>
+
+        <!-- Main Dashboard Placeholder -->
+        <main class="dashboard-main" id="dashboard-main">
+            <div style="text-align: center; padding: 4rem 1rem; color: var(--text-secondary);">
+                <i class="ph ph-cloud-sun" style="font-size: 3rem; color: var(--accent-blue); margin-bottom: 1rem; display: inline-block;"></i>
+                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Ready to Track Weather</h2>
+                <p>Search any city worldwide or click a popular city chip above.</p>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
