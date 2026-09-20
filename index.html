@@ -94,13 +94,50 @@
             <span class="toast-message" id="toast-message">City not found. Please check the spelling.</span>
         </div>
 
-        <!-- Main Dashboard Placeholder -->
+        <!-- Main Dashboard Content -->
         <main class="dashboard-main" id="dashboard-main">
-            <div style="text-align: center; padding: 4rem 1rem; color: var(--text-secondary);">
-                <i class="ph ph-cloud-sun" style="font-size: 3rem; color: var(--accent-blue); margin-bottom: 1rem; display: inline-block;"></i>
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Ready to Track Weather</h2>
-                <p>Search any city worldwide or click a popular city chip above.</p>
-            </div>
+            <!-- Left Side: Hero Card & 3-Day Forecast -->
+            <section class="overview-section">
+                <!-- Current Weather Hero Card -->
+                <article class="glass-card hero-card" id="hero-card">
+                    <div class="hero-header">
+                        <div class="location-box">
+                            <h1 class="city-name" id="city-name">--</h1>
+                            <div class="region-badge" id="region-country">
+                                <i class="ph ph-map-pin"></i>
+                                <span id="location-text">Loading location...</span>
+                            </div>
+                        </div>
+                        <div class="time-box">
+                            <span class="live-tag"><i class="ph ph-broadcast"></i> LIVE</span>
+                            <p class="current-time" id="local-time">--:--</p>
+                            <p class="current-date" id="local-date">--</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-body">
+                        <div class="temp-display">
+                            <div class="temp-visual">
+                                <img id="weather-icon" class="weather-icon" src="" alt="Weather condition icon" />
+                                <span class="temp-value" id="current-temp">--°</span>
+                            </div>
+                            <div class="temp-details">
+                                <div class="condition-badge" id="condition-text">Loading...</div>
+                                <div class="high-low">
+                                    <span><i class="ph ph-arrow-up"></i> H: <strong id="temp-max">--°</strong></span>
+                                    <span><i class="ph ph-arrow-down"></i> L: <strong id="temp-min">--°</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feels-like-pill">
+                            <i class="ph ph-thermometer-simple"></i>
+                            <span>Feels like <strong id="feels-like-temp">--°</strong></span>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
         </main>
     </div>
     <script src="script.js"></script>
