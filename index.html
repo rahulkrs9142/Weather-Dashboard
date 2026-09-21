@@ -138,6 +138,144 @@
                 </article>
 
             </section>
+            <!-- Right Side: Atmospheric Highlights -->
+            <section class="details-section">
+
+                <!-- Today's Highlights Grid -->
+                <div class="highlights-container">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title"><i class="ph ph-sparkle"></i> Today's Atmospheric Highlights</h2>
+                    </div>
+
+                    <div class="highlights-grid">
+                        <!-- Card 1: Air Quality Index -->
+                        <div class="glass-card metric-card aqi-card">
+                            <div class="metric-head">
+                                <span class="metric-label">Air Quality Index</span>
+                                <div class="metric-icon-wrap aqi-icon"><i class="ph ph-leaf"></i></div>
+                            </div>
+                            <div class="metric-body">
+                                <div class="metric-primary">
+                                    <span class="metric-value" id="aqi-val">--</span>
+                                    <span class="metric-badge" id="aqi-status">--</span>
+                                </div>
+                                <div class="aqi-bars">
+                                    <div class="aqi-item">
+                                        <span>PM2.5</span>
+                                        <strong id="pm25-val">--</strong>
+                                    </div>
+                                    <div class="aqi-item">
+                                        <span>PM10</span>
+                                        <strong id="pm10-val">--</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Wind Status -->
+                        <div class="glass-card metric-card">
+                            <div class="metric-head">
+                                <span class="metric-label">Wind Status</span>
+                                <div class="metric-icon-wrap"><i class="ph ph-wind"></i></div>
+                            </div>
+                            <div class="metric-body">
+                                <div class="metric-primary">
+                                    <span class="metric-value" id="wind-speed">--</span>
+                                    <span class="metric-unit" id="wind-unit">km/h</span>
+                                </div>
+                                <div class="metric-sub">
+                                    <i class="ph ph-compass" id="wind-compass"></i>
+                                    <span>Direction: <strong id="wind-dir">--</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Humidity -->
+                        <div class="glass-card metric-card">
+                            <div class="metric-head">
+                                <span class="metric-label">Humidity</span>
+                                <div class="metric-icon-wrap"><i class="ph ph-drop"></i></div>
+                            </div>
+                            <div class="metric-body">
+                                <div class="metric-primary">
+                                    <span class="metric-value" id="humidity-val">--</span>
+                                    <span class="metric-unit">%</span>
+                                </div>
+                                <div class="metric-sub">
+                                    <i class="ph ph-info"></i>
+                                    <span id="humidity-desc">Normal humidity</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: UV Index -->
+                        <div class="glass-card metric-card">
+                            <div class="metric-head">
+                                <span class="metric-label">UV Index</span>
+                                <div class="metric-icon-wrap"><i class="ph ph-sun"></i></div>
+                            </div>
+                            <div class="metric-body">
+                                <div class="metric-primary">
+                                    <span class="metric-value" id="uv-val">--</span>
+                                    <span class="metric-badge" id="uv-badge">--</span>
+                                </div>
+                                <div class="metric-sub">
+                                    <i class="ph ph-shield-check"></i>
+                                    <span id="uv-desc">Protection level</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Visibility & Pressure -->
+                        <div class="glass-card metric-card">
+                            <div class="metric-head">
+                                <span class="metric-label">Visibility & Pressure</span>
+                                <div class="metric-icon-wrap"><i class="ph ph-gauge"></i></div>
+                            </div>
+                            <div class="metric-body">
+                                <div class="dual-metric">
+                                    <div class="metric-col">
+                                        <span class="sub-label"><i class="ph ph-eye"></i> Visibility</span>
+                                        <div class="sub-val"><strong id="vis-val">--</strong> <span id="vis-unit">km</span></div>
+                                    </div>
+                                    <div class="metric-divider"></div>
+                                    <div class="metric-col">
+                                        <span class="sub-label"><i class="ph ph-arrows-in-cardinal"></i> Pressure</span>
+                                        <div class="sub-val"><strong id="pressure-val">--</strong> <span>hPa</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Sunrise & Sunset -->
+                        <div class="glass-card metric-card astro-card">
+                            <div class="metric-head">
+                                <span class="metric-label">Sun & Moon</span>
+                                <div class="metric-icon-wrap"><i class="ph ph-sun-horizon"></i></div>
+                            </div>
+                            <div class="metric-body">
+                                <div class="astro-row">
+                                    <div class="astro-item">
+                                        <i class="ph ph-sun-dim astro-icon sunrise-icon"></i>
+                                        <div>
+                                            <span class="astro-label">Sunrise</span>
+                                            <p class="astro-time" id="sunrise-time">--:--</p>
+                                        </div>
+                                    </div>
+                                    <div class="astro-item">
+                                        <i class="ph ph-moon astro-icon sunset-icon"></i>
+                                        <div>
+                                            <span class="astro-label">Sunset</span>
+                                            <p class="astro-time" id="sunset-time">--:--</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </section>
         </main>
     </div>
     <script src="script.js"></script>

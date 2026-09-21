@@ -667,3 +667,202 @@ body {
 .feels-like-pill strong {
     color: var(--text-primary);
 }
+
+
+/* ==========================================================================
+   Atmospheric Highlights Grid
+   ========================================================================== */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+}
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 155px;
+    padding: 1.3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+}
+
+.metric-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.06);
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    color: var(--accent-sky);
+}
+
+.metric-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.metric-primary {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-primary);
+}
+
+.metric-unit {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.metric-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    margin-left: auto;
+    background: rgba(16, 185, 129, 0.18);
+    color: var(--accent-emerald);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.metric-badge.badge-moderate {
+    background: rgba(245, 158, 11, 0.18);
+    color: var(--accent-amber);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.metric-badge.badge-unhealthy {
+    background: rgba(244, 63, 94, 0.18);
+    color: var(--accent-rose);
+    border-color: rgba(244, 63, 94, 0.3);
+}
+
+.metric-sub {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.metric-sub i {
+    font-size: 0.95rem;
+    color: var(--accent-sky);
+}
+
+/* AQI Details */
+.aqi-bars {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.aqi-item strong {
+    color: var(--text-primary);
+    margin-left: 0.3rem;
+}
+
+/* Dual Metric for Visibility & Pressure */
+.dual-metric {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.metric-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.sub-label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.sub-val strong {
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.sub-val span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.metric-divider {
+    width: 1px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sun & Moon Astro */
+.astro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.astro-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.astro-icon {
+    font-size: 1.8rem;
+}
+
+.sunrise-icon {
+    color: var(--accent-amber);
+}
+
+.sunset-icon {
+    color: var(--accent-indigo);
+}
+
+.astro-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.astro-time {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
