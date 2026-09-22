@@ -137,9 +137,29 @@
                     </div>
                 </article>
 
+                <!-- 3-Day Forecast Card -->
+                <article class="glass-card forecast-card">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title"><i class="ph ph-calendar-blank"></i> 3-Day Forecast</h2>
+                    </div>
+                    <div class="forecast-list" id="forecast-list">
+                        <!-- Populated dynamically by JavaScript -->
+                    </div>
+                </article>
             </section>
-            <!-- Right Side: Atmospheric Highlights -->
+
+            <!-- Right Side: Hourly Forecast & Atmospheric Highlights -->
             <section class="details-section">
+                <!-- 24-Hour Hourly Timeline -->
+                <article class="glass-card hourly-card">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title"><i class="ph ph-clock"></i> Today's Hourly Forecast</h2>
+                        <span class="subtitle-hint">Next 24 Hours</span>
+                    </div>
+                    <div class="hourly-track" id="hourly-track">
+                        <!-- Populated dynamically by JavaScript -->
+                    </div>
+                </article>
 
                 <!-- Today's Highlights Grid -->
                 <div class="highlights-container">
@@ -275,9 +295,23 @@
                     </div>
                 </div>
             </section>
-            </section>
         </main>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
+            <div class="spinner-wrap">
+                <div class="glow-spinner"></div>
+                <p class="loading-text">Fetching Live Weather Data...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Crafted with <span class="heart">♥</span> by <strong>Rahul Kumar</strong> • Powered by WeatherAPI</p>
+        </footer>
     </div>
+
+    <!-- Application Script -->
     <script src="script.js"></script>
 </body>
 </html>

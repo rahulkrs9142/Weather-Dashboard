@@ -668,6 +668,185 @@ body {
     color: var(--text-primary);
 }
 
+/* ==========================================================================
+   3-Day Forecast Section
+   ========================================================================== */
+.section-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.section-title i {
+    color: var(--accent-sky);
+    font-size: 1.25rem;
+}
+
+.subtitle-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.forecast-item {
+    display: grid;
+    grid-template-columns: 85px 44px 1fr 90px;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.forecast-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(3px);
+}
+
+.forecast-day-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-day-name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.forecast-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.forecast-icon {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.forecast-condition {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.forecast-temps {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+}
+
+.temp-max-val {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.temp-min-val {
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   24-Hour Hourly Forecast
+   ========================================================================== */
+.hourly-track {
+    display: flex;
+    gap: 0.85rem;
+    overflow-x: auto;
+    padding: 0.3rem 0.2rem 0.8rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.hourly-track::-webkit-scrollbar {
+    height: 6px;
+}
+
+.hourly-track::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-full);
+}
+
+.hourly-item {
+    flex: 0 0 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.9rem 0.6rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: var(--transition);
+    cursor: default;
+}
+
+.hourly-item:hover {
+    background: rgba(56, 189, 248, 0.12);
+    border-color: rgba(56, 189, 248, 0.35);
+    transform: translateY(-3px);
+}
+
+.hourly-item.active {
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.35), rgba(99, 102, 241, 0.35));
+    border-color: var(--accent-sky);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.25);
+}
+
+.hourly-time {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.hourly-icon {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.hourly-temp {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hourly-rain {
+    font-size: 0.72rem;
+    color: var(--accent-sky);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-weight: 500;
+}
 
 /* ==========================================================================
    Atmospheric Highlights Grid
@@ -865,4 +1044,81 @@ body {
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Loading Overlay
+   ========================================================================== */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 29, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.spinner-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.glow-spinner {
+    width: 54px;
+    height: 54px;
+    border: 3px solid rgba(56, 189, 248, 0.15);
+    border-top-color: var(--accent-sky);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.app-footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.app-footer strong {
+    color: var(--text-secondary);
+}
+
+.heart {
+    color: var(--accent-rose);
+    display: inline-block;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
 }
