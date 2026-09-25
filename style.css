@@ -1122,3 +1122,58 @@ body {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.25); }
 }
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1180px) {
+    .dashboard-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        padding: 1rem 1rem 2rem;
+        gap: 1.25rem;
+    }
+
+    .app-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .search-form {
+        max-width: 100%;
+    }
+
+    .header-actions {
+        justify-content: space-between;
+    }
+
+    .action-btn .btn-label {
+        display: none;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .temp-value {
+        font-size: 3.8rem;
+    }
+
+    .weather-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
